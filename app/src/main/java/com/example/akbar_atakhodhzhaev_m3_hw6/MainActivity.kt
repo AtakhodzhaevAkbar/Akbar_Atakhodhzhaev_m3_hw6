@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Create an array of Car objects
         val dataSet = arrayOf(
             Car("Civic", "Honda", 2022),
             Car("Altima", "Nissan", 2021),
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
             Car("Outlander", "Mitsubishi", 2021)
         )
 
-        // Set up RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = CustomAdapter(dataSet)
     }
