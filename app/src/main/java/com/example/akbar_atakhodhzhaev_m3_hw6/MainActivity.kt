@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dataSet = arrayOf("Honda", "Nissan", "Toyota", "Mercedes", "BMW", "Audi","Volkswagen","Tvr","Land Rover","Mitsubishi")
+        val dataSet = arrayOf("1", "2", "3", "4", "5")
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = CustomAdapter(dataSet)
