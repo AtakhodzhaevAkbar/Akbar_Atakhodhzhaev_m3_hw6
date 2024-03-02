@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.akbar_atakhodhzhaev_m3_hw6.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -15,8 +14,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dataSet = arrayOf("1", "2", "3", "4", "5")
+        // Create an array of Car objects
+        val dataSet = arrayOf(
+            Car("Civic", "Honda", 2022),
+            Car("Altima", "Nissan", 2021),
+            Car("Corolla", "Toyota", 2020),
+            Car("E-Class", "Mercedes", 2023),
+            Car("3 Series", "BMW", 2023),
+            Car("A4", "Audi", 2022),
+            Car("Golf", "Volkswagen", 2022),
+            Car("Griffith", "Tvr", 2021),
+            Car("Range Rover", "Land Rover", 2022),
+            Car("Outlander", "Mitsubishi", 2021)
+        )
 
+        // Set up RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = CustomAdapter(dataSet)
     }
